@@ -103,3 +103,27 @@ if (!rain) {
 } else {
     console.log("Get your jacket!")
 }
+// ? SWitch Statement
+/* 
+    keywords:
+        - switch
+        - case
+        - break
+            - takes us out of or code block
+        - default
+            - run if no cases match
+    Structure:
+    switch(expression) {
+        case ... :
+            return;
+            break;
+        case ... :
+            return;
+            break;
+        case ... :
+            return;
+            break;
+        default:
+            return;
+    }
+*/
