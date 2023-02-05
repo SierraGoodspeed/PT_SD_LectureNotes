@@ -100,5 +100,6 @@ console.log(3 % 2); // 1
 
 //Exponential
 r **= 1; //r = r * r;
-
+console.log(r)
 console.log (2 ** 3) //8, (2 * 2) * 2;
+
