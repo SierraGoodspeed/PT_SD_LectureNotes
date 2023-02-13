@@ -135,3 +135,12 @@ let catArray = [
    }
 
    
+
+   for (let a = 1; a < 8; a++) {
+
+   if ( a === 4 ) {
+        console.log ('4!')
+        
+   console.log (a)
+}
+   }
