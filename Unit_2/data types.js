@@ -131,5 +131,5 @@ console.log(days);
 console.log(days.toString());
 console.log(days.length);
 
-console.log(typeof 1+7);\
+console.log(typeof 1+7);
 console.log ( undefined + 9)

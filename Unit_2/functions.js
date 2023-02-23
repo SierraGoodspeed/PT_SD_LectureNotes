@@ -122,3 +122,109 @@ console.log(totalSpent);
     order(argument, argument);
 */
 
+//! Return
+/* 
+    Structure:
+    let hi = function() {
+           1
+        return "hi";
+    };
+            2        3
+    let greeting = hi();
+    console.log(greeting);
+
+    1. keyword: return - brings our data out of our function.
+    2. New variable to hold the returned value.
+    3. When called, the function becomes the value of the return.
+*/
+
+function fName(){
+    return "Steve";
+}
+let myName = fName();
+console.log(myName);
+
+let volume = function (l, w, h){
+    let total = l * w * h;
+    return total;
+}
+
+let exOne = volume(3, 5, 2);
+let exTwo = volume(7, 3, 5);
+
+console.log(`Ex One: ${exOne} \nEx Two ${exTwo}`); // \n = "New Line"
+
+
+function coffeeMaker(filter){
+    return `A full pot of ${filter}!`
+}
+
+let mon = coffeeMaker ("coffee");
+let wed = coffeeMaker("tea");
+let sun = coffeeMaker("soup");
+
+console.log(mon, "\n" + wed, "\n" + sun);
+
+//! Arrow Functions
+/* 
+    Structure:
+       1        2
+    let hi = () => {
+        console.log('hi');
+    }
+
+    1. We need to set the arrow function to a variable
+    2. We use the "fat arrow" to signify it's a function.
+
+    - Introduced in ES6. They are basically just a more concise way to write functional expressions - NOT declarations.
+    ! Do NOT get hoisted!
+    
+    Two different styles:
+        - Concise Body
+        - Block Body
+*/
+
+//* Concise Body
+let goodbye = () => console.log("Goodbye, friend!");
+goodbye();
+
+let total = () => 2 + 5;
+let is7 = total();
+//console.log(is7);
+console.log(total());
+
+//* Block Body
+let apples = (qty) => {
+    return `There are ${qty} apple(s).`
+};
+
+let appleCount = apples(4);
+console.log(appleCount);
+console.log(apples(7));
+
+//same as above with concise body
+let apples2 = (qty) => `There are ${qty} apple(s).`
+
+console.log(apples2(5));
+console.log(apples2(is7));
+
+// Multiple params
+let calc = (x, y) => x + y;
+console.log(calc(3, 15));
+
+
+let calc2 = (x,y) => {
+    return x + y;
+}
+console.log(calc2(5, 5));
+
+//* IIFE
+/* 
+    - Immediately Invoked Function Expression
+    - Helps allocating space in memory for anonymous functions
+    - fires our function as soon as it is read.
+*/
+
+(function () {
+    console.log("IIFE fired");
+  })();

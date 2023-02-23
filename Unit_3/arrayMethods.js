@@ -198,7 +198,7 @@ let tmnt =  ["Mikey", "Donnie", "Leo", "Raph", "Splinter", "Shredder", "Baxter"]
 let character = "Leo";
 
 console.log(
-  "Find Ex 1: ",
+  "Fin Ex 1: ",
   tmnt.find((c) => c === character)
 );
 
