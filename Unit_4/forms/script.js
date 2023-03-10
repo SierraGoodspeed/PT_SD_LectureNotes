@@ -47,6 +47,12 @@ function displayTable() {
     console.log('displayTable()', animals);
 
     // Use a while liip (this will be hecka helpful later, so remember this section)
+/* 
+    While the table body has a child in the first position (if it has anything in it/ appended):
+    - Use the method removeChild on tbody
+    - .removeChild() requires details on which
+*/
+
     while (table.firstChild) {
         table.removeChild(table.firstChild);
     }

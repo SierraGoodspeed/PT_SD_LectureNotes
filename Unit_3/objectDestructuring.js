@@ -76,4 +76,4 @@ locations.beach = ["dock", "fisherman"]
 
 
 console.log(locations);
-console.log(generalLocations)
+console.log(generalLocations);

@@ -47,3 +47,25 @@ console.log("Before:", Object.keys(futurama));
 delete futurama.currently_running;
 console.log("After:", Object.keys(futurama));
 
+
+
+
+
+
+const person = {
+    name: 'John',
+    age: 30,
+    sayHello: function() {
+      console.log(`Hello, my name is ${this.age}.`);
+    }
+  };
+  
+  person.sayHello(); // Output: 'Hello, my name is John.'
+  
+
+
+  const myObject = {
+    name: "Alice",
+    age: 30
+  };
+  console.log(myObject.name);

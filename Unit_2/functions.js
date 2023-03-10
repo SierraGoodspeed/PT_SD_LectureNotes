@@ -228,3 +228,18 @@ console.log(calc2(5, 5));
 (function () {
     console.log("IIFE fired");
   })();
+
+
+
+
+
+  const calculatefib = (num) => {
+    const arr = [0,1];
+    let a, b;
+  for (let i = 2; i < num; i++)  {
+    a = arr [i - 1];
+    b = arr[i - 2];
+    arr.push(a + b);
+  } 
+    return arr;
+  };

@@ -225,3 +225,68 @@ console.log(
   - Does not execute the function for empty elements.
   - Does not change the original array.
 */
+
+
+
+
+
+
+
+
+
+
+
+class GPA {
+  constructor() {
+    this.grades = {
+      midterm: {
+        grade: 0,
+        weight: 1
+      },
+      project: {
+        grade: 0,
+        weight: 1
+      },
+      final: {
+        grade: 0,
+        weight: 2
+      }
+    };
+  }
+
+  gpa(grades) {
+    let gradesToWeight = Object.keys(grades);
+    let gradeSum = 0;
+    let weightSum = 0;
+    
+    gradesToWeight.forEach(function(key) {
+      gradeSum += grades[key].grade * grades[key].weight;
+      weightSum += grades[key].weight;
+    });
+
+    let weightedGrade = gradeSum / weightSum;
+    console.log("Weighted Grade: " + weightedGrade.toFixed(2));
+    return weightedGrade.toFixed(2);
+  }
+}
+
+// Create an instance of the GPA class
+let myGPA = new GPA();
+
+// Invoke the gpa() function by passing in the "grades" Object
+let grades = {
+  midterm: {
+    grade: 85,
+    weight: 1
+  },
+  project: {
+    grade: 90,
+    weight: 1
+  },
+  final: {
+    grade: 95,
+    weight: 2
+  }
+};
+
+myGPA.gpa(grades);
