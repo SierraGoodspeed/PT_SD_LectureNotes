@@ -8,6 +8,13 @@ const PORT = 4000;
 // Create a variable that imports the practice controller(gives app.js access to it)
 const practiceController = require(`./controller/practice.controller`);
 
+
+// Provide us access to use Json within our routes
+// call on our app var, use the .use() method to tell our app: express.json()(use JSON please express)
+app.use(express.json());
+
+
+
 // Use a method called .use(), this points our express app to where it should go
 // Call the app variable , use the .use() method, specify using express to target the public folder, note: when a file is not specified, JS always defaults to seeking an idex file. 
 //__dirname comes from node (it's accessible whenever)
@@ -23,6 +30,8 @@ console.log(`pathway:`, __dirname); // route us to the public folder
 */
 
 app.use(`/practice`, practiceController);
+
+
 
 
 // Create a method that "listens" for us spinning up/starting our application 
