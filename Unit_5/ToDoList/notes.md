@@ -41,3 +41,37 @@ We are going to set up a controller folder and make our first controller file ca
 
 
 Sending a status code with a response is good practice for both the user and developer.
+
+## Postman
+- Set Methods -w/ dropdown to the left of the url bar
+  - GET / POST / PUT / DELETE depending on route
+  - Body, tab label under the url
+    - raw (select the raw value radio button)
+    - JSON (blue dropdown to the right of the radio buttons)
+    - Make a JSON object (in the body area)
+
+---
+## Preparing our server to handle JSON objects
+In our `app.js` we need to have this line of code:
+```js
+app.use(express.json());
+```
+This provides us access JSON files throughout our routes. 
+
+## MVC
+- Stands for Model View Controller
+- Architecture pattern (structure in which they are written/coded) that helps our Separation of Concerns  
+- Model: Database schematic, the blueprint for our data (we dictate what created data looks like/it's datatype)
+- View: browser, Postman, etc. (what the users see)
+  - Application that interface with the server.
+- Controller: Part of the server application which handles logic. (How we build our logic within the sever, we code and create what routes can be used and what they do.) 
+
+---
+
+## Middleware 
+- A function that accesses the request and response
+- Has a call stack 
+  - request
+  - response
+  - next
+  
