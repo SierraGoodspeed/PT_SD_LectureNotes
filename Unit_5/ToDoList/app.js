@@ -13,7 +13,12 @@ const PORT = 4000;
 const practiceController = require(`./controller/practice.controller`);
 //Require in the index.js from helpers (./helpers) w/ object destructuring
 const auth = require('./controller/auth.controller') //Importing in the auth controller routes for the apps use/reference
+const routes = require ("./controller/routes.controller");
 const {logTime} = require('./helpers'); 
+
+// Create a variable to require in and have CORS dependency accessible 
+
+const cors = require("cors");
 
 
 // -----------------App Functionality/ What it does next ---------------
@@ -28,6 +33,10 @@ app.use(express.json());
 
 // parses the body from our browser so it can display the response
 app.use(express.urlencoded())
+
+// Runs the cors preflight prior to hitting our endpoints/routes
+// Allows all CORS requests
+app.use(cors());
 
 // Use a method called .use(), this points our express app to where it should go
 // Call the app variable , use the .use() method, specify using express to target the public folder, note: when a file is not specified, JS always defaults to seeking an idex file. 
@@ -47,6 +56,9 @@ app.use(`/practice`, practiceController);
 
 // Building route to auth controller: http://localhost:4000/todo
 app.use("/todo", auth);
+
+// Route to routes controller: http://localhost:4000/routes
+app.use("/routes", routes);
 
 
 // Create a method that "listens" for us spinning up/starting our application 
